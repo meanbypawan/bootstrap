@@ -1,0 +1,11 @@
+Break Point
+<div class="row"></div>
+ a. Xtra Large(xl)   col-xl-3   
+               <div class="row justify-content-center">
+                 <div class="col-3"></div>
+                 <div class="col-3"></div>
+                 <div class="col-3"></div>
+               </div>  
+ b. Large(lg)   col-lg-3
+ c. Medium(md)  col-md-3
+ d. Small(sm)   col-sm-3
