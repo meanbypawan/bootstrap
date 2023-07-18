@@ -24,10 +24,27 @@
         .btn-1:hover:before{
             height: 100%;
         }
+        span{
+            position: absolute;
+        }
+        span::after{
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -15;
+            width: 100%;
+            height: 10px;
+            background-color: red;
+            transition: all 0.5s;
+        }
+        span:hover:after{
+          background-color: white;
+        }
     </style>
     </head>
     <body>
         <p>Hello....</p>
         <button class="btn-1">Hello</button>
+        <span href="#">Hello</span>
     </body>
 </html>
