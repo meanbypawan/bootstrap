@@ -1,6 +1,7 @@
 <html>
     <head>
         <link href="css/bootstrap.min.css" rel="stylesheet"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
         <style>
             .container-size{
                 height: 650px;
@@ -51,52 +52,79 @@
                 color: black;
             }
             .four-box div{
-               height: 350px;
-               background-color: aquamarine;
-             
+                height: 340px;
+                color:#3D626C;
             }
-            .four-box div:nth-child(1){
-                background-color: #d7edd8;
-            }
-            .four-box div:nth-child(3){
-                background-color: #eaf4f8;
-            }
-            .four-box div:nth-child(even){
-                background-color: #fff3f3;
+            .four-box div p{
+                line-height: 1.7;
             }
             .four-box div span{
                 position: absolute;
-                top: 80%;
-                left: 15%;
+                bottom: 10%;
+                font-size: 20px;
             }
-            .line::after{
-              content: "";
-              position: absolute;
-              height: 3px;
-              background-color: black;
-              width: 0%;
-              left: 0;
-              bottom: -5px;
-              transition: 0.5s;
+            .four-box div span::after{
+                position: absolute;
+                content: "";
+                width: 100%;
+                height: 2px;
+                background-color: black;
+                left: 0;
+                bottom: -3px;
+                transform: scaleX(1);
+                transform-origin: bottom right;
+                transition: all 0.5s ease-out;
             }
-            .line:hover:after{
-              width: 100%;
+            .four-box div span:hover:after{
+               width: 100%;
+               transform: scaleX(0);
             }
-            .description div{
+            .second-row div{
+                height: 250px;
+                color:#3D626C;
+                font-weight: 500;
+            }
+            .second-row div p{
+                line-height: 1.6;
+            }
+            .second-row div:nth-child(2) span::after{
+                content: "";
+                position: absolute;
+                width: 100%;
+                transform: scaleX(1);
+                transform-origin: bottom right;
+                background-color: #3d626c;
+                height: 2px;
+                bottom: 2px;
+                left: 0;
+                transition: transform 1s ease-out;
+            }
+            .second-row div:nth-child(2) span:hover:after{
+                transform: scaleX(0);
+            }
+            .second-row div:nth-child(2) span{
+                bottom: 20%;
+            }
+            .third-row div p{
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 1.6;
+                color: #767676;
+            }
+            .banner-image img{
+                position: absolute;
+                top: 0;
+            }
+            .fourth-row div{
                 height: 300px;
-             
+                padding: 20px;
             }
-            .left{
-                background-image: url("https://mobirise.com/extensions/personam4/assets/images/mbr-1.jpg");
-                height: 400px;
-                background-repeat: no-repeat;
-                background-size: cover;
+            .fourth-row div i{
+                font-size: 120px;
+                color: #3D626C;
             }
-            .right{
-                background-image: url("https://mobirise.com/extensions/personam4/assets/images/mbr-4.jpg");
-                height: 400px;
-                background-repeat: no-repeat;
-                background-size: cover;
+            .listing li{
+                line-height: 2;
             }
         </style>
     </head>
@@ -114,62 +142,162 @@
         </div>
       </div>
       <div class="container-fluid">
-        <div class="row mt-4">
-            <div class="col-md-3  four-box p-3  position-relative">
-               <div style="background-color: #d7edd8;" class="p-3"> 
-                <h1 class="mb-5">Style</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elitdo eiusmod temporeum dicant partem scripserit.</p>
-                <span class="line" style="margin-bottom: -20px;">View more</span>
-               </div> 
+        <div class="row">
+            <div class="col-md-3 four-box p-3">
+               <div class="p-3 position-relative" style="background-color: #D7EDD8;">
+                 <h1>Style</h1>
+                 <p class="mt-3">Lorem ipsum dolor sit amet, consectetur adipiscing elitdo eiusmod temporeum dicant partem scripserit.</p>
+                 <span class="text-uppercase">View more</span>
+               </div>  
             </div>
-            <div class="col-md-3  four-box p-3  position-relative">
-                <div style="background-color: #fff3f3;" class="p-3"> 
-                 <h1 class="mb-5">Style</h1>
-                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elitdo eiusmod temporeum dicant partem scripserit.</p>
-                 <span class="line" style="margin-bottom: -20px;">View more</span>
-                </div> 
+            <div class="col-md-3 four-box p-3">
+                <div class="p-3 position-relative" style="background-color: #FFF3F3;">
+                  <h1>Brand</h1>
+                  <p class="mt-3">Lorem ipsum dolor sit amet, consectetur adipiscing elitdo eiusmod temporeum dicant partem scripserit.</p>
+                  <span class="text-uppercase">View more</span>
+                </div>  
              </div>
-             <div class="col-md-3  four-box p-3  position-relative">
-                <div style="background-color: #d7edd8;" class="p-3"> 
-                 <h1 class="mb-5">Style</h1>
-                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elitdo eiusmod temporeum dicant partem scripserit.</p>
-                 <span class="line" style="margin-bottom: -20px;">View more</span>
-                </div> 
+             <div class="col-md-3  four-box p-3">
+                <div class="p-3 position-relative" style="background-color: #EAF4F8;">
+                  <h1>Design</h1>
+                  <p class="mt-3">Lorem ipsum dolor sit amet, consectetur adipiscing elitdo eiusmod temporeum dicant partem scripserit.</p>
+                  <span class="text-uppercase">View more</span>
+                </div>  
              </div>
-             <div class="col-md-3  four-box p-3  position-relative">
-                <div style="background-color: #fff3f3;" class="p-3"> 
-                 <h1 class="mb-5">Style</h1>
-                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elitdo eiusmod temporeum dicant partem scripserit.</p>
-                 <span class="line" style="margin-bottom: -20px;">View more</span>
-                </div> 
+             <div class="col-md-3 four-box p-3">
+                <div class="p-3 position-relative" style="background-color: #FFF3F3;">
+                  <h1>Fashion</h1>
+                  <p class="mt-3">Lorem ipsum dolor sit amet, consectetur adipiscing elitdo eiusmod temporeum dicant partem scripserit.</p>
+                  <span class="text-uppercase">View more</span>
+                </div>  
              </div>
-            <br/>
-            <br/>
         </div>
-      </div>
-      <div class="container">
-        <div class="row description">
-            <div class="col-md-6 d-flex flex-row align-items-center">
-                <h1 class="display-4 text-right">A new way to create design for you</h1>
+        <div class="row second-row">
+            <div class="col-md-6 d-flex align-items-center">
+                <h1 class="display-4 pl-5 text-right">A new way to create design for you</h1>
             </div>
-            <div class="col-md-6 d-flex flex-column justify-content-center">
+            <div class="position-relative col-md-6 d-flex flex-column justify-content-center">
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elitdo eiusmod temporeum dicant partem scripserit. Lorem ipsum dolor sit amet, consec tetur adipiscing elit adipiscing elitdo.</p>
-                <span style="font-size: 20px;" class="text-uppercase mt-3">View more</span>
+                <span class="position-absolute">View more</span>
             </div>
         </div>
       </div>
-      <div style="background-color: #fff3f3;" class="pt-5">
-        <h1 class="text-center" style="font-size: 50px; font-family: sans-serif;">Make Your Style Today</h1>
-        <div class="container mt-5">
-            <div class="row">
-                <div class="col-md-6 left"></div>
-                <div class="offset-md-2 col-md-4 right"></div>
+      <div class="container-fluid p-5" style="background-color: #FFF3F3;">
+        <h1 class="text-center">Make Your Style Today</h1>
+        <div class="container">
+            <div class="row mt-5">
+                <div class="col-md-7">
+                    <img width="100%" height="400px" src="https://mobirise.com/extensions/personam4/assets/images/mbr-1.jpg"/>
+                    <h2 style="color:#3D626C;" class="mt-2">Ideas</h2>
+                    <span style="color:#3D626C;">Projects</span>
+                </div>
+                <div class="col-md-4 offset-1">
+                    <img  width="100%" height="400px" src="https://mobirise.com/extensions/personam4/assets/images/mbr-4.jpg"/>
+                    <h2 class="mt-2" style="color:#3D626C;">Skills</h2>
+                    <span style="color:#3D626C;">Protfolio</span> 
+                </div>
             </div>
-            <div class="row">
-                <div class="col-md-6">Ideas<br/>Projects</div>
-                <div class="offset-md-2 col-md-4">Skills<br/>Portfolio</div>
+            <div class="row mt-5">
+                <div class="col-md-4">
+                    <img width="100%" height="400px" src="https://mobirise.com/extensions/personam4/assets/images/mbr-2.jpg"/>
+                    <h2 style="color:#3D626C;" class="mt-2">Team</h2>
+                    <span style="color:#3D626C;">Projects</span>
+                </div>
+                <div class="col-md-7 offset-1">
+                    <img  width="100%" height="400px" src="https://mobirise.com/extensions/personam4/assets/images/mbr-3.jpg"/>
+                    <h2 class="mt-2" style="color:#3D626C;">Work</h2>
+                    <span style="color:#3D626C;">Protfolio</span> 
+                </div>
+            </div>
+            <h1 class="mt-5 display-4">Brand History</h1>
+            <div class="row third-row">
+              <div class="col-md-6">
+                <p class="pt-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque a tortor sed mi fringilla suscipit. Fusce fermentum consequat tincidunt. Aliquam id fringilla lacus. Duis laoreet urna at pellentesque semper. Nunc eu ornare dui. Sed pulvinar condimentum volutpat. Vestibulum vitae rutrum urna, sed maximus metus. Donec fermentum, leo eget ultrices fringilla.</p>
+              </div>
+              <div class="col-md-6">
+                <p class="pt-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque a tortor sed mi fringilla suscipit. Fusce fermentum consequat tincidunt. Aliquam id fringilla lacus. Duis laoreet urna at pellentesque semper. Nunc eu ornare dui. Sed pulvinar condimentum volutpat. Vestibulum vitae rutrum urna, sed maximus metus. Donec fermentum, leo eget ultrices fringilla.</p>
+              </div>
             </div>
         </div>
+      </div>
+      <div class="big-image position-relative" style="background-color: black;">
+         <img width="100%" height="700px" style="opacity: 0.5;" src="https://mobirise.com/extensions/personam4/assets/images/mbr-3.jpg"/>
+         <div class="container-fluid position-absolute" style="top:0;">
+            <div class="row">
+                <div class="col-md-6 d-flex align-items-center" style="height:700px;">
+                  <h1 class="text-center text-white display-3">A New Way To Create Design</h1>
+                </div>
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-md-6" style="height: 350px;padding:0;">
+                            <img width="100%" height="350px" src="https://mobirise.com/extensions/personam4/assets/images/mbr.jpg"/>
+                        </div>
+                        <div class="col-md-6 d-flex flex-column justify-content-center" style="background-color: #D7EDD8; height:350px;">
+                           <h1 style="color:#3D626C;" class="display-4">Create Your Unique Style</h1>
+                           <span class="pl-2 mt-3" style="color: #3D626C; font-size: 20px;">View More</span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 d-flex align-items-center" style="background-color: white; height:350px;">
+                          <p style="color:#3D626C; font-size: 25px; font-weight: 500;line-height: 1.7;">Lorem ipsum dolor sit amet, consectetur adipiscing elitdo eiusmod temporeum dicant partem scripserit.</p>
+                        </div>
+                        <div class="col-md-6" style="height: 350px; padding:0;">
+                            <img width="100%" height="350px" src="https://mobirise.com/extensions/personam4/assets/images/mbr-4.jpg"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+         </div>
+      </div>
+      <div class="container-fluid" style="background-color: #F6F6F6;">
+        <div class="row fourth-row d-flex justify-content-around" style="width:100%;">
+            <div class="col-md-2 text-center d-flex flex-column justify-content-center">
+                <i class="fa fa-car"></i>
+                <span class="mt-4" style="font-size: 20px; font-weight: 500; color:#3D626C;">Management</span>
+            </div>
+            <div class="col-md-2 text-center d-flex flex-column justify-content-center">
+                <i class="fa fa-car"></i>
+                <span class="mt-4" style="font-size: 20px; font-weight: 500; color:#3D626C;">Profesinalism</span>
+            </div>
+            <div class="col-md-2 text-center d-flex flex-column justify-content-center">
+                <i class="fa fa-car"></i>
+                <span class="mt-4" style="font-size: 20px; font-weight: 500; color:#3D626C;">Sociability</span>
+            </div>
+            <div class="col-md-2 text-center d-flex flex-column justify-content-center">
+                <i class="fa fa-car"></i>
+                <span class="mt-4" style="font-size: 20px; font-weight: 500; color:#3D626C;">Multitasking</span>
+            </div>
+            <div class="col-md-2 text-center d-flex flex-column justify-content-center">
+                <i class="fa fa-car"></i>
+                <span class="mt-4" style="font-size: 20px; font-weight: 500; color:#3D626C;">Attentiveness</span>
+            </div>
+        </div>
+      </div>
+      <div class="container-fluid" style="background-color: #F6F6F6;">
+         <div class="row">
+            <div class="col-md-4 p-5" style="height: 600px; background-color:#FFF3F3;">
+                <h1 class="text-right display-4">Unique Style</h1>
+            </div>
+            <div class="col-md-8 p-5 d-flex flex-column">
+                <h2>A New Way To Create Design</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vulputate est leo, vitae auctor metus eleifend eu. Quisque fermentum nisi sed convallis ornare.</p>
+                <ul class="listing" style="padding:16px;">
+                    <li>Aliquam lorem ante, dapibus in, viverra quis, feugiat</li>
+                    <li>Aliquam lorem ante, dapibus in, viverra quis, feugiat</li>
+                    <li>Aliquam lorem ante, dapibus in, viverra quis, feugiat</li>
+                    <li>Aliquam lorem ante, dapibus in, viverra quis, feugiat</li>
+                    <li>Aliquam lorem ante, dapibus in, viverra quis, feugiat</li>
+                    <li>Aliquam lorem ante, dapibus in, viverra quis, feugiat</li>
+                    <li>Aliquam lorem ante, dapibus in, viverra quis, feugiat</li>
+                    <li>Aliquam lorem ante, dapibus in, viverra quis, feugiat</li>
+                    <li>Aliquam lorem ante, dapibus in, viverra quis, feugiat</li>
+                    <li>in, viverra quis, feugiat</li>
+                    <li>Aliquam lorem ante</li>
+                    <li>lorem ante</li>
+
+                </ul>
+            </div>
+         </div>
       </div>
     </body>
 </html>
